@@ -1,0 +1,40 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-width: 320px;
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keyboard users can always see where they are on the page. */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e097ff;
+  outline-offset: 4px;
+}
+
