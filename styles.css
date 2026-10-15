@@ -883,3 +883,97 @@ h3 {
     height: auto;
   }
 }
+
+
+@keyframes leanFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-hero .label {
+  animation: leanFadeUp 0.7s ease both;
+}
+
+.page-hero h1 {
+  animation: leanFadeUp 0.8s ease 0.15s both;
+}
+
+.page-hero p {
+  animation: leanFadeUp 0.8s ease 0.3s both;
+}
+
+.hero h1 {
+  animation: leanFadeUp 0.8s ease both;
+}
+
+.hero .subtitle,
+.hero .label {
+  animation: leanFadeUp 0.8s ease 0.15s both;
+}
+
+.hero p {
+  animation: leanFadeUp 0.8s ease 0.3s both;
+}
+
+.hero .button-row {
+  animation: leanFadeUp 0.8s ease 0.45s both;
+}
+
+.hero-graphic {
+  animation: leanFadeUp 1s ease 0.3s both;
+}
+
+.lean-reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.lean-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.highlight-card,
+.progress-card,
+.steps article,
+.goal-event,
+.auction-feature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover,
+.progress-card:hover,
+.steps article:hover,
+.goal-event:hover,
+.auction-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(67, 20, 95, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero .label,
+  .page-hero h1,
+  .page-hero p,
+  .hero h1,
+  .hero .subtitle,
+  .hero .label,
+  .hero p,
+  .hero .button-row,
+  .hero-graphic {
+    animation: none;
+  }
+
+  .lean-reveal,
+  .lean-reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
